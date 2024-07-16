@@ -1,4 +1,6 @@
 const Cart = require('../models/cart.model');
+const Product = require('../models/product.model');
+
 
 
 const getCarts = async (req,res) => {
@@ -29,11 +31,18 @@ const getCart = async (req,res) => {
 const createCart = async (req,res) => {
 
     try {
+        const {name, quantity} = req.body;
+        const product = await Product.findOne({name: name});
+
+        const { _id, ...productWithoutId } = product.toObject();
+
+        const productToSave = {...productWithoutId, quantity: quantity}    
         
-        const cart = await Cart.create(req.body);
-        res.status(200).json(cart);
+        const cart = await Cart.create(productToSave);
+        res.status(200).json('success');
     }
     catch(error){
+        console.log(error.message);
         res.status(500).json({message: error.message}); 
 
     }
@@ -86,8 +95,8 @@ const deleteCart = async(req,res) => {
 
 module.exports = { 
     getCarts, 
-    getCart, 
-    createCart, 
-    updateCart,
+    getCart,  
+    createCart,
+    updateCart, 
     deleteCart
 }; 

@@ -8,7 +8,7 @@ const {getProducts, getProduct, createProduct, updateProduct, deleteProduct } = 
 
 router.get('/', getProducts);
 
-router.get("/:id", getProduct);
+router.get("/:name", getProduct);
 
 router.post("/", createProduct); 
 

@@ -10,7 +10,12 @@ const SubcategorySchema = mongoose.Schema(
         categoryid: {
             type: String, 
             required: true
-        }
+        },
+        imgSrc: {
+            type: [String], 
+            required: true
+
+        }, 
     }, 
     { 
         timestamps: true

@@ -13,14 +13,37 @@ const ProductSchema = mongoose.Schema(
             default:0
 
         },
-        image: {
-            type: String,
-            required: false,
-
+        imgSrc1: {
+            type: [String], 
+            required: true, 
         },
+        imgSrc2: {
+            type: [String], 
+            required: false, 
+        },
+        imgSrc3: {
+            type: [String], 
+            required: false, 
+        },
+        imgSrc4: {
+            type: [String], 
+            required: false, 
+        },
+        imgSrc5: {
+            type: [String], 
+            required: false, 
+        },
+        imgSrc6: {
+            type: [String], 
+            required: false, 
+        },
+
+
+        
+
         description: {
             type: String,
-            required: true,
+            required: true, 
 
         },
         subcategoryid: {

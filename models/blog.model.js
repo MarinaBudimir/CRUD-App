@@ -8,10 +8,14 @@ const BlogSchema = mongoose.Schema(
 
         },
        
-        content: {
+        description: {
             type: String,
             required: true,
 
+        }, 
+        imgSrc: {
+            type: [String],
+            required:false, 
         }
         
     },
