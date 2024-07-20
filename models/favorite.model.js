@@ -20,7 +20,7 @@ const FavoriteSchema = mongoose.Schema(
 
         },
      
-        imgSrc: {
+        imgSrc1: {
             type: [String],
             required: true,
 
@@ -35,11 +35,7 @@ const FavoriteSchema = mongoose.Schema(
             type: String,
             required: false,
         },
-        showHeart: {
-            type: Boolean,
-            required: true,
-            default: true, // default value is false (not clicked)
-    },
+       
         
      
     

@@ -17,7 +17,7 @@ const CartSchema = mongoose.Schema(
             required: true,
 
         },
-        imgSrc: {
+        imgSrc1: {
             type: [String],
             required: true,
         },
