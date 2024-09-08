@@ -51,14 +51,10 @@ app.use('/api/subcategories', subcategoryRoute);
 app.use('/api/articles', articleRoute);
 
 
-
-
-
 app.get("/",(req,res)=>{
     res.send("Hello from Node API"); 
 
 });
-
 
 
 mongoose.connect("mongodb+srv://mbudim01:Solin0302mb@backenddb.tomlfjg.mongodb.net/NODEAPI?retryWrites=true&w=majority&appName=BackendDB")
